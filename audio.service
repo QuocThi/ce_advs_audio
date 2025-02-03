@@ -1,0 +1,15 @@
+[Unit]
+Description=Run advs for Ce Store
+After=graphical.target
+Requires=graphical.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+WorkingDirectory=/path/to/your/script
+ExecStart=/path/to/advs.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=graphical.target
